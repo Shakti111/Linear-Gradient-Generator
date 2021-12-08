@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    font-family: "Outfit", sans-serif;
+}
+
+button,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+}
+
+.wrapper {
+    max-width: 1200px;
+    height: 100%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading {
+    margin-top: 10vh;
+}
+
+.canvas {
+    height: 250px;
+    width: 600px;
+    /* background: grey; */
+    margin-top: 5vh;
+    border-radius: 1em;
+    border: 4px solid #dadce0;
+}
+
+.input-container {
+    margin-top: 7vh;
+    width: 500px;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-container > div {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container > div input {
+    margin-top: 0.7em;
+    outline: 0;
+    border: 2px solid #023e8a;
+    height: 2.5em;
+    width: 8em;
+    font-size: 1em;
+    padding-inline: 10px;
+    border-radius: 2em;
+    text-align: center;
+}
+
+.button-container {
+    margin-top: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 17em;
+}
+
+.button-container button:nth-of-type(1) {
+    border: 0;
+    outline: 0;
+    height: 3.5em;
+    width: max-content;
+    padding-inline: 1em;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    background: hsla(152, 100%, 50%, 1);
+
+    background: linear-gradient(
+        90deg,
+        hsla(152, 100%, 50%, 1) 0%,
+        hsla(186, 100%, 69%, 1) 100%
+    );
+
+    background: -moz-linear-gradient(
+        90deg,
+        hsla(152, 100%, 50%, 1) 0%,
+        hsla(186, 100%, 69%, 1) 100%
+    );
+
+    background: -webkit-linear-gradient(
+        90deg,
+        hsla(152, 100%, 50%, 1) 0%,
+        hsla(186, 100%, 69%, 1) 100%
+    );
+}
+
+.button-container button:nth-of-type(2) {
+    height: 4em;
+    aspect-ratio: 1;
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+    cursor: pointer;
+
+    background: hsla(152, 100%, 50%, 1);
+
+    background: linear-gradient(
+        90deg,
+        hsla(152, 100%, 50%, 1) 0%,
+        hsla(186, 100%, 69%, 1) 100%
+    );
+
+    background: -moz-linear-gradient(
+        90deg,
+        hsla(152, 100%, 50%, 1) 0%,
+        hsla(186, 100%, 69%, 1) 100%
+    );
+
+    background: -webkit-linear-gradient(
+        90deg,
+        hsla(152, 100%, 50%, 1) 0%,
+        hsla(186, 100%, 69%, 1) 100%
+    );
+    position: relative;
+}
+
+.tool-tip::after {
+    content: "copied!";
+    color: #000;
+    position: absolute;
+    width: 70px;
+    height: 20px;
+    background: grey;
+    opacity: 0.9;
+    left: -15%;
+    top: 80%;
+}
+
+.popup {
+    position: absolute;
+    height: 15em;
+    width: 25em;
+    background: linear-gradient(
+        90deg,
+        hsla(339, 100%, 55%, 1) 0%,
+        hsla(197, 100%, 64%, 1) 100%
+    );
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    border-radius: 5px;
+    display: none;
+}
+
+.popup.visible {
+    display: block;
+    animation: visible 0.2s ease-out;
+}
+
+@keyframes visible {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.popup i {
+    color: #fff;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.popup p {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1em;
+    margin-top: 1.5em;
+}
