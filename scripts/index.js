@@ -11,13 +11,14 @@ const copyBtn = document.querySelector(
 const popup = document.querySelector(".popup");
 const small = document.querySelector(".popup .small");
 const cross = document.querySelector(".popup i");
+const range = document.querySelector("#range");
 
 generateBtn.addEventListener("click", () => {
     ifHelper(value1, value2, valueDegree);
 
     canvas.style.background = `linear-gradient(
         ${valueDegree.value}deg,
-        ${value1.value} 0%,
+        ${value1.value} ${range.value}%,
        ${value2.value} 100%
     )`;
 });
@@ -31,7 +32,7 @@ copyBtn.addEventListener("click", () => {
 
     navigator.clipboard.writeText(`background: linear-gradient(
         ${valueDegree.value}deg,
-        ${value1.value} 0%,
+        ${value1.value} ${range.value}%,
        ${value2.value} 100%
     );`);
 });
@@ -53,3 +54,11 @@ const ifHelper = (value1, value2, valueDegree) => {
         popup.classList.add("visible");
     }
 };
+
+range.addEventListener("input", () => {
+    canvas.style.background = `linear-gradient(
+        ${valueDegree.value}deg,
+        ${value1.value} ${range.value}%,
+       ${value2.value} 100%
+    )`;
+});

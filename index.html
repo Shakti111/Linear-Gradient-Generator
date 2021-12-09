@@ -12,6 +12,11 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <link
+            rel="shortcut icon"
+            href="./china-street-3840×2160.jpg"
+            type="image/x-icon"
+        />
         <script src="./scripts/index.js" defer></script>
         <title>Linear Gradient Generator</title>
     </head>
@@ -45,6 +50,10 @@
                     <label for="input-second">Hex Value</label>
                     <input type="text" id="input-second" />
                 </div>
+            </div>
+            <div class="range-live">
+                <label for="range">Starting point</label>
+                <input id="range" type="range" min="0" max="100" value="0" />
             </div>
             <div class="button-container">
                 <button>Generate Gradient</button>

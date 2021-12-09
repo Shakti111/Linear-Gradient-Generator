@@ -204,3 +204,17 @@ h6 {
     padding: 1em;
     margin-top: 1.5em;
 }
+
+.range-live {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
+.range-live label {
+    text-align: center;
+}
+
+.range-live input {
+    margin-top: 1em;
+}
